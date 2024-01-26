@@ -8,8 +8,9 @@ app.set('view engine', 'pug');
 const path = require('path');
 app.set('views', path.join(__dirname, '../views'));
 
+    
+const port:string|number = process.env.PORT || 3000; 
 class Api {
-    port:number = 3000;
     table: PostTable;
     
     constructor(table: PostTable) {
@@ -21,8 +22,8 @@ class Api {
         this.insertPost();
         this.deletePost();
         
-        app.listen(this.port, () => {
-            console.log(`🔵 Example app listening on port ${this.port}`);
+        app.listen(port, () => {
+            console.log(`🔵 Example app listening on port ${port}`);
         });
     }
 
