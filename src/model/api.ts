@@ -1,11 +1,12 @@
 import express, { Request, Response } from 'express';
 import bodyParser from 'body-parser';
+import path from 'path';
+
 import PostTable from './postTable';
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.set('view engine', 'pug');
-const path = require('path');
 app.set('views', path.join(__dirname, '../views'));
 
     
