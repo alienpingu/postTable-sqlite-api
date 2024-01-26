@@ -1,0 +1,17 @@
+extends default
+
+block content
+  .container
+    h1(class='text-center my-3')=title
+    if isError
+        p Error
+    else if isNoPost
+        p No post
+    else
+        .row
+            each post in posts
+                .col.col-12.col-md-4
+                    .card.mb-3
+                        .card-body
+                            p.card-text=post.content
+                        .card-footer=post.username

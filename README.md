@@ -1,4 +1,6 @@
-# boilerplate-ts-node-jest
+# Post board
+Read post by users and submit post
+Build with pug, node and sqlite
 
 ## Installation Instructions
 

@@ -1,0 +1,20 @@
+extends default
+
+block content
+  .container
+    h1(class='text-center my-3')=title
+    form(method='POST' action='/insert')
+        .form-floating 
+            input(type='text' id='username' name='username' class='form-control mb-3' placeholder='username')
+            label(for='username') username
+        .form-floating
+            textarea(
+                id='content'
+                name='content'
+                class='form-control'
+                class='mb-3'
+                placeholder='Write something'
+                style='min-height: 120px;')
+            label(for='content') Write something
+        .d-grid
+            button(type='submit' value='submit' class='btn btn-primary btn-lg') Submit
